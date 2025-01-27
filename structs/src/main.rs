@@ -61,4 +61,6 @@ fn main() {
     let origin = Point(0, 0, 0);
 
     let subject = AlwaysEqual;
+
+    println!("Hello, world!");
 }
