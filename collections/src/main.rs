@@ -72,4 +72,81 @@ fn main() {
 
     println!("Look: {v:?}");
 
+    // Strings 
+    let mut s : String = String::new();
+
+    let data : &str = "initial contents";
+
+    let s : String = data.to_string();
+    
+    // The method also works on a literal directly:
+    let s : String = "Initial contents".to_string();
+
+    let s : String = String::from("Initial contents");
+
+    println!("{}", s);
+
+    let hello = String::from("السلام عليكم");
+    println!("{}", hello);
+    let hello = String::from("Dobrý den");
+    println!("{}", hello);
+    let hello = String::from("Hello");
+    println!("{}", hello);
+    let hello = String::from("שלום");
+    println!("{}", hello);
+    let hello = String::from("नमस्ते");
+    println!("{}", hello);
+    let hello = String::from("こんにちは");
+    println!("{}", hello);
+    let hello = String::from("안녕하세요");
+    println!("{}", hello);
+    let hello = String::from("你好");
+    println!("{}", hello);
+    let hello = String::from("Olá");
+    println!("{}", hello);
+    let hello = String::from("Здравствуйте");
+    println!("{}", hello);
+    let hello = String::from("Hola");
+    println!("{}", hello);
+
+
+    let mut s : String = String::from("foo");
+    s.push_str("bar");
+
+    println!("{}", s);
+
+
+    let mut s1:String = String::from("foo");
+    let s2:&str = "bar";
+    s1.push_str(s2);
+    println!("s2 is {s2}");
+
+
+    let mut s:String = String::from("lo");
+    s.push('l');
+
+
+    let s1:String = String::from("Hello, ");
+    let s2:String = String::from("world!");
+
+    let s3 = s1 + &s2; // This method is something like this:
+                       // fn add(self, s: &str) -> String{
+
+    println!("{s3}");
+
+    let s1:String = String::from("tic");
+    let s2:String = String::from("tac");
+    let s3:String = String::from("toe");
+
+    // let s:String = s1 + "-" + &s2 + "-" + &s3;
+    // println!("{s}");
+    
+    println!("{s1}-{s2}-{s3}");
+
+    let s:String = format!("{s1}-{s2}-{s3}");
+
+    println!("{s}");
+
+    
 }
+
